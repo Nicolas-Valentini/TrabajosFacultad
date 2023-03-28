@@ -1,3 +1,0 @@
-/home/clinux01/Documentos/so/tp/entregable/build/CMakeFiles/rebuild_cache.dir
-/home/clinux01/Documentos/so/tp/entregable/build/CMakeFiles/edit_cache.dir
-/home/clinux01/Documentos/so/tp/entregable/build/CMakeFiles/test_tp_sistemas.dir
