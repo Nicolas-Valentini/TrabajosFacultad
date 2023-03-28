@@ -1,10 +1,14 @@
-## Compliar
-´´´ bash
-mkdir build && cd build && cmake ..
-´´´
+## Compilar
 
-## Correr 
-´´´ bash
+```bash
+mkdir build && cd build && cmake ..
+```
+
+## Correr
+
+
+```bash
 ./correrTests
-´´´
+```
+
 
