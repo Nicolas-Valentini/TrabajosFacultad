@@ -4,7 +4,7 @@ Para ejecutar estos programas es necesario un interprete de Haskell. Se puede ut
 ```bash
 ghci
 ```
-Dentro de GHCi para cargar los archivos utilizar
+Dentro de GHCi para cargar los archivos a utilizar
 ```bash
 :load TP1
 ```
