@@ -1,10 +1,10 @@
 ## Compliar
-´´´bash
+´´´ bash
 mkdir build && cd build && cmake ..
 ´´´
 
 ## Correr 
-´´´bash
+´´´ bash
 ./correrTests
 ´´´
 
