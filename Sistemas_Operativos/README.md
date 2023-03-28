@@ -1,2 +1,2 @@
-## Trabajo practico de Sistemas Operativos. 
-Este es un trabajo práctico de Sistemas Operativos que involucra la implementación de hilos y semáforos en C. El objetivo es crear dos equipos de jugadores que puedan operar simultáneamente sin interferir en los procesos correspondientes.
+## Sistemas Operativos. 
+En esta materia se estudiaron los fundamentos del diseño de un sistema operativo, entre los que se destacan la política de scheduling, la programación concurrente, la sincronización de procesos, la administración de memoria, la creación de drivers, los sistemas de archivos y los conceptos básicos de seguridad de la información. Este trabajo práctico se centra en la implementación de threads y semáforos en C. El objetivo es crear dos equipos de jugadores que puedan operar simultáneamente sin interferir en los procesos correspondientes.
