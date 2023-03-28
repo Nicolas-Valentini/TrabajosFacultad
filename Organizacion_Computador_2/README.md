@@ -1,4 +1,4 @@
-## Organizacion del Computador 2. 
+## Organizacion del Computador 2
 Este proyecto fue desarrollado en la asignatura de Organización del Computador 2 y consistió en la creación de un sistema operativo que puede ser ejecutado dentro de una máquina virtual Bochs. Dicha máquina virtual emula la funcionalidad de un procesador Intel 8086. El proyecto incluye la creación de una estructura de kernel, la implementación de la transición del modo real al modo protegido, el diseño de un sistema de interrupciones, la capacidad de paginación y la implementación de un planificador de tareas personalizado.
 
 ## Bochs
