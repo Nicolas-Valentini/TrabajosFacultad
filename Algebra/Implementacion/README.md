@@ -1,4 +1,4 @@
-## Algebra
+## Correr
 
 Para ejecutar estos programas es necesario un interprete de Haskell. Se puede utilizar GHCi, para acceder al mismo se puede utilizar el comando 
 ```bash
