@@ -1,6 +1,8 @@
 ## Compilar 
 
+```bash
 make
+```
 
 ## PCA.cpp
 
