@@ -1,14 +1,5 @@
-## Compilar
-
-```bash
-mkdir build && cd build && cmake .. && make
+```console
+foo@bar:~$ mkdir -p build && cd build && cmake ../
+foo@bar:~$ make
+foo@bar:~$ ./test_tp_sistemas
 ```
-
-## Correr
-
-Para correr es necesario estar dentro de la carpeta build
-
-```bash
-./test_tp_sistemas
-```
-

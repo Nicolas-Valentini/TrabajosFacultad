@@ -15,54 +15,59 @@ private:
     // Atributos Privados
     int nro_ronda = 0;
     vector<vector<color>> tablero;
-    vector<coordenadas> pos_jugadores_azules, pos_jugadores_rojos;
     coordenadas pos_bandera_roja, pos_bandera_azul;
-    color turno;
     estrategia strat;
 
-    mutex mutex_moverse;
-	int valor_semaforo;
-    //
-    //...
-    //
+
+    //bitsets que indican, de cada equipo, cuales jugadores pueden moverse y cuales no
+    vector<bool> jugadores_rojos_trabados;
+    vector<bool> jugadores_azules_trabados;
 
     // Métodos privados
-    void mover_jugador_tablero(coordenadas pos_anterior, coordenadas pos_nueva, color colorEquipo);
-    //
-    //...
-    //
-    void hacer_signals(color equipo);
+    void restaurar_movimientos_restantes(color equipo);
+    bool es_posicion_valida(coordenadas pos);
+    coordenadas proxima_posicion(coordenadas anterior, direccion movimiento); // Calcula la proxima posición a moverse==
+    bool es_bandera_contraria(coordenadas pos);
+    bool equipo_entero_trabado(color equipo);
+    void liberar_jugadores();
 
 public:
     // Atributos públicos
-    gameMaster(Config config);
-    void termino_ronda(color equipo); // Marca que un jugador terminó la ronda
-    int mover_jugador(direccion dir, int nro_jugador);
-    color ganador = INDEFINIDO;
-    //
-    //...
-    //
     int x, y, jugadores_por_equipos;
-    color obtener_coordenadas(coordenadas coord);
+    int quantum;
+    int movimientos_restantes_equipo;
+    int mas_cercano_rojo, mas_cercano_azul;
+    int mas_prioritario_azul, mas_prioritario_rojo;
+    vector<coordenadas> pos_jugadores_azules, pos_jugadores_rojos;
+    color ganador = INDEFINIDO;
+    sem_t turno_rojo, turno_azul;
+    vector<sem_t> limitador_movimientos_rojo;
+    vector<sem_t> limitador_movimientos_azul;
+    vector<int> prioridad_jugadores_rojos;
+    vector<int> prioridad_jugadores_azules;
+
+    //Dos semaforos extra para SHORTEST, donde ademas de pedir que el juego no empiece hasta que ambos equipos
+    //encuentren la bandera contraria, debemos pedir que no empiece hasta que ambos equipos encuentren el jugador
+    //mas cercano a dicha bandera. Se definen en gamemaster para que cada equipo pueda comunicarse con el del
+    //equipo contrario
+    sem_t jugador_mas_cercano_rojo_encontrado;
+    sem_t jugador_mas_cercano_azul_encontrado;
+    sem_t jugador_prioritario_rojo_encontrado;
+    sem_t jugador_prioritario_azul_encontrado;
 
     // Métodos públicos
+    gameMaster(Config config, estrategia strategy, const int quantum);
+    int mover_jugador(direccion dir, int nro_jugador);
+    void termino_ronda(color equipo); // Marca que un jugador terminó la ronda
+    color obtener_coordenadas(coordenadas coord);
+    bool es_color_libre(color color_tablero);
     bool termino_juego();
 	int getTamx();
 	int getTamy();
-    static int distancia(coordenadas pair1, coordenadas pair2);
-    sem_t turno_rojo, turno_azul; // FIXME: Al principio necesito entrar como azul, luego puedo hacerlo por el método termino_ronda....
+    string enum_a_string(int dir);
 
-    vector<sem_t> limitador_movimientos_rojo;
-    vector<sem_t> limitador_movimientos_azul;
-
-    color en_posicion(coordenadas coord);
-    bool es_posicion_valida(coordenadas pos);
-    bool es_color_libre(color color_tablero);
-	coordenadas proxima_posicion(coordenadas anterior, direccion movimiento); // Calcula la proxima posición a moverse	
-    //
-    //...
-    //
-    int quantum = 10;
+    color turno;
+    mutex mutex_movimiento;
 };
 
 #endif // GAMEMASTER_H
