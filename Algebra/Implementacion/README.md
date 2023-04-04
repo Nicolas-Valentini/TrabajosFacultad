@@ -41,7 +41,7 @@ maxsir :: (Float, Float, Float) -> Float -> Float -> Int -> Float
 ```
 
 
-# Para TP2 las funciones implementadas toman los parametros:
+## Para TP2 las funciones implementadas toman los parametros:
 
 Un divisor propio de un número natural n ∈ N es un divisor de n distinto de n. Llamemos s(n) a la suma de los divisores propios de n. Decimos que n es perfecto si n = s(n).
 Determina si un número es perfecto
