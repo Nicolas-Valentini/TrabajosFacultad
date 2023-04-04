@@ -1,7 +1,7 @@
 ## Compilar
 
 ```bash
-mkdir build && cd build && cmake ..
+mkdir build && cd build && cmake .. && make
 ```
 
 ## Correr
@@ -9,6 +9,6 @@ mkdir build && cd build && cmake ..
 Para correr es necesario estar dentro de la carpeta build
 
 ```bash
-./correrTests
+./test_tp_sistemas
 ```
 
