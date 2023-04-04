@@ -1,5 +1,6 @@
-1. Agregar la carpeta "eigen-3.4.0" al directorio
-2. make
+## Compilar 
+
+make
 
 ## PCA.cpp
 
@@ -9,3 +10,5 @@
   3. **out:** nombre del csv de salida
   4. **alpha:** parámetro para PCA
   5. **k:** parámetro para kNN
+
+## Para experimentar se puede utilizar el notebook de Python 
