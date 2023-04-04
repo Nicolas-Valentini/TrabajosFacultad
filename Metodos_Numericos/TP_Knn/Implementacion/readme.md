@@ -1,6 +1,3 @@
-## Eigen 3.4.0
-Para utilizar este programa es necesario descomprimir la carpeta eigen-3.4.0.zip
-
 ## Compilar 
 
 ```bash
