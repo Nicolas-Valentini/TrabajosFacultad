@@ -1,6 +1,6 @@
 ## Compilar
 ```bash
-./make
+make
 ```
 ## PCA.cpp
 
