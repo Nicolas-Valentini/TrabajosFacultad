@@ -1,7 +1,7 @@
 ## Compilar
 
 ```bash
-mkdir build && cd build && cmake ..
+mkdir build && cd build && cmake .. && make
 ```
 
 ## Correr
